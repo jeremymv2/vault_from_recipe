@@ -1,0 +1,9 @@
+{
+  "name": "automate_runner",
+  "chef_environment": "test",
+  "run_list": [
+
+  ],
+  "normal": {
+  }
+}
