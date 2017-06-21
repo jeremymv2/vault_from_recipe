@@ -1,10 +1,12 @@
-require 'chef/mixin/shell_out'
-include Chef::Mixin::ShellOut
+require 'chef/mixin/powershell_out'
+include Chef::Mixin::PowershellOut
 
 def thing_on?
-  shell_out!('echo sam').stdout.chomp == 'sam' ? true : false
+  powershell_out!('Write-Host "Hello, World!"').stdout.chomp == 'Hello, World!' ? true : false
 end
 
 def the_password
-  shell_out!('echo bar').stdout.chomp
+  powershell_out!('Write-Host "password"').stdout.chomp
 end
+
+puts the_password
